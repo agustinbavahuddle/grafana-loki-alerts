@@ -60,3 +60,14 @@ data:
       retention_deletes_enabled: false
       retention_period: 0
 
+    ruler:
+      storage:
+        type: local
+        local:
+          directory: /tmp/rules
+      rule_path: /tmp/scratch
+      alertmanager_url: http://localhost
+      ring:
+        kvstore:
+          store: inmemory
+      enable_api: true
