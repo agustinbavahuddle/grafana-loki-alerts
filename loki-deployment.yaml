@@ -5,7 +5,7 @@ metadata:
   namespace: monitoring
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 10Gi
@@ -43,7 +43,7 @@ spec:
             - name: loki-data
               mountPath: /data/loki
             - name: rules-data
-              mountPath: /tmp/rules
+              mountPath: /data/rules
       securityContext:
         fsGroup: 0
         runAsNonRoot: false

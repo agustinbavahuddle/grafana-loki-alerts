@@ -64,9 +64,10 @@ data:
       storage:
         type: local
         local:
-          directory: /tmp/rules
+          # directory: /tmp/rules
+          directory: /data/rules
       rule_path: /tmp/scratch
-      alertmanager_url: http://localhost
+      # alertmanager_url: http://localhost
       ring:
         kvstore:
           store: inmemory
